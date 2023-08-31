@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" 
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Planillero</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></link> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"/>
+
+    </h:head>
+
+    <h:body style="background-color: azure">
+
+        <!-- Menu -->
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="principal.xhtml" style="color: #80ced6; font-family:fantasy "
+               >PORTAL PLANILLA PLANILLERO
+            </a>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="../planillero//menu.xhtml">
+                        <input type="button" id="boton" class="btn btn-outline my-2 my-sm-0" style="color: #80ced6;border-color: #80ced6 " value="Ir a mi menú"></input>
+                    </a>
+                </form>
+            <form class="form-inline my-2 my-lg-0" >
+                <a href="../../ingresoFront.xhtml">
+                        <input type="button" id="boton" class="btn btn-outline my-2 my-sm-0" style="color: #80ced6;border-color: #80ced6 " value="Cerrar mi Sesión"></input>
+                    </a>
+                </form>
+
+        </nav>
+
+        <br></br>
+        <center>    
+
+            <h3 class="p-mt-0" style="background-color: azure">Sesión de Planilleros</h3>
+            <p:tabView>
+                <p:tab id="tabs" title="Principal" >
+
+                    <p class="p-m-0">
+
+                        <div class="card">
+                            <div class="card-re">
+                                <br></br>
+                                <br></br>
+
+                                <h:form>
+                                    <h:outputLabel value="Usuario"/>
+                                    <h:inputText value="" required="true"  size="40" maxlength="80" />
+                                    <h:selectOneMenu value="">
+                                        <f:selectItem itemValue="Todos"></f:selectItem>
+                                    </h:selectOneMenu>
+                                    <h:commandButton class="btn btn-primary mb-3 botones" style="display: inline-block; margin-top: 5px"  
+                                                     value="Procesar pago de planilla" ></h:commandButton>
+                                </h:form>
+                                <br></br>
+
+                            </div>
+
+                        </div>
+
+                    </p>
+                </p:tab>
+
+                <p:tab title="Reportes">
+                    <p class="p-m-0">
+                        <div class="card">
+                            <div class="card-re">
+                                <h:form>
+                                    <h:commandButton value="Cargar todos" class="login-button"></h:commandButton>
+                                    <h:commandButton value="Buscar por" class="login-button"></h:commandButton>
+
+                                    <h:inputText value="" required="true"  size="40" maxlength="80" />
+                                    <h:commandButton value="Obtener reporte" class="login-button"></h:commandButton>
+                                    <center>    
+                                        <div class="card">
+
+
+                                            <p:dataTable>
+                                                <p:column headerText="Inactivos">
+                                                    <h:outputText value="hola prueba" />
+                                                </p:column>
+                                                <p:column headerText="Activos">
+                                                    <h:outputText value="hola prueba" />
+                                                </p:column>
+                                                <p:column headerText="Rol">
+                                                    <h:outputText value="hola prueba" />
+                                                </p:column>
+                                            </p:dataTable>
+
+                                        </div>
+                                    </center>
+                                </h:form>
+                            </div>
+
+                        </div>
+                    </p>
+                </p:tab>
+            </p:tabView>
+
+        </center>
+
+
+
+
+        <br></br>
+        <br></br>
+        <!-- page footer  -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
+    </h:body>
+</html>
+

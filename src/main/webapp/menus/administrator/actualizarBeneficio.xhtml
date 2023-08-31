@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+      
+
+    <h:head>
+        <title>Planillas</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></link> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"/>
+
+    </h:head>
+        <title>Actualizar beneficio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+       <h:body style="background-color: azure">
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <a class="navbar-brand" href="principal.xhtml" style="color: #80ced6; font-family:fantasy "
+               >PORTAL PLANILLA PLANILLERO</a>
+            <form class="form-inline my-2 my-lg-0">
+                <a href="../administrator/menu.xhtml">
+                        <input type="button" id="boton" class="btn btn-outline my-2 my-sm-0" style="color: #80ced6;border-color: #80ced6 " value="Ir a mi menú"></input>
+                    </a>
+                </form>
+            <form class="form-inline my-2 my-lg-0" >
+                <a href="../../ingresoFront.xhtml">
+                        <input type="button" id="boton" class="btn btn-outline my-2 my-sm-0" style="color: #80ced6;border-color: #80ced6 " value="Cerrar mi Sesión"></input>
+                    </a>
+                </form>
+               <form class="form-inline my-2 my-lg-0" >
+                   <a href="../administrator/empleadoPlanillero.xhtml">
+                        <input type="button" id="boton" class="btn btn-outline my-2 my-sm-0" style="color: #80ced6;border-color: #80ced6 " value="Volver a la anterior"></input>
+                    </a>
+                </form>
+        </nav>
+  <center>
+      <h3 class="p-mt-0" style="background-color: azure">Sesión de planillero</h3>  
+        <p:tabView>
+                <p:tab  id="tabs" title="Mantenimiento de usuario" >
+
+                    <p class="p-m-0">
+          
+          <h:form>
+                            <h:outputLabel value="Planilla"/>
+                         
+                            <h:inputText value="#{BeanUsuario_Planilla.beneficio.planilla}" required="true" readonly="true" size="20" maxlength="80" />
+                            <br></br>
+                            <h:outputLabel value="Empleado"/>
+                        
+                            <h:inputText value="#{BeanUsuario_Planilla.beneficio.empleado}" required="true" readonly="true"  size="20" maxlength="80" />
+                            <br></br>
+                            <br></br>
+                            <h:outputLabel value="Acrónimo"/>
+                         
+                            <h:inputText value="#{BeanUsuario_Planilla.beneficio.acronimo}" required="true" readonly="true" size="20" maxlength="80" />
+                          
+                            <h:outputLabel value="Descripción beneficios"/>
+                         
+                            <h:inputText value="#{BeanUsuario_Planilla.beneficio.descripcion_beneficios}" required="true" readonly="true" size="20" maxlength="80" />
+                            <br></br>
+                            <br></br>
+                            <h:outputLabel value="Porcentaje beneficios"/>
+                          
+                            <h:inputText value="#{BeanUsuario_Planilla.beneficio.porcentaje_beneficios}" required="true"   size="20" maxlength="80" />
+                             <br></br>
+                             <h:outputLabel value="Activado"/>
+                               <h:inputText  maxlength="5" size="3" class="cont" value="#{BeanUsuario_Planilla.beneficio.activado}" ></h:inputText>
+              
+                             <br></br>
+                            <center>
+                                <h:outputText style="text-align: center; color: red;" value="#{BeanUsuario_Planilla.mensaje}"></h:outputText>
+                            </center>
+<br></br>
+                           
+<h:commandButton class="btn btn-primary mb-3 botones" style="display: inline-block; margin-top: 5px" action="#{BeanUsuario_Planilla.actualizar_beneficios(BeanUsuario_Planilla.beneficio)}" 
+                                             value="Actualizar" ></h:commandButton>
+
+
+ 
+                            
+ </h:form> 
+                           </p>   
+                </p:tab>   
+            </p:tabView>  
+        </center> 
+      </h:body>
+</html>
